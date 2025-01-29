@@ -55,6 +55,15 @@ body {
             color: #FFF;
             background: #751f7a;
         }
+
+        @include media(991) {
+            padding: 9px 30px;
+        }
+
+        @include media(575) {
+            width: 100%;
+            justify-content: center;
+        }
     }
 
     &-yellow {
@@ -120,6 +129,7 @@ body {
 
         @include media(991) {
             font-size: 16px;
+            padding: 0;
         }
 
         &.active, &:hover {
@@ -139,6 +149,49 @@ body {
 }
 // Header end
 
+// Mobile menu
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    display: none;
+
+    &.active {
+        @include media(991) {
+            display: block;
+        }
+    }
+
+    &__bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.619);
+    }
+
+    &__content {
+        width: 300px;
+        position: relative;
+        height: 100%;
+        background: #FFF;
+        padding: 30px;
+
+        ul {
+            gap: 12px;
+        }
+
+        a {
+            font-size: 18px;
+        }
+    }
+}
+// Mobile menu end
+
 // Home
 .home {
     position: relative;
@@ -153,10 +206,18 @@ body {
         z-index: -1;
         object-fit: cover;
         object-position: center bottom;
+
+        @include media(991) {
+            height: calc(100% - 82px);
+        }
     }
 
     &-container {
         padding: 124px 0 48px;
+
+        @include media(991) {
+            padding: 78px 0 29px;
+        }
     }
 
     &-box {
@@ -165,9 +226,22 @@ body {
         z-index: 1;
         flex-shrink: 0;
 
+        @include media(991) {
+            position: absolute !important;
+            left: 50%;
+            top: 143px;
+            transform: translateX(-50%);
+            width: 280px;
+            height: 280px;
+        }
+
         img {
             &:first-child {
                 transform: scale(1.05);
+
+                @include media(991) {
+                    width: 170px;
+                }
             }
 
             @keyframes logoRotate {
@@ -182,6 +256,11 @@ body {
             &:last-child {
                 z-index: -1;
                 animation: logoRotate 15s linear infinite;
+
+                @include media(991) {
+                    width: 280px;
+                    height: 280px;
+                }
             }
         }
     }
@@ -189,16 +268,37 @@ body {
     &-top {
         gap: 76px;
         margin-bottom: 24px;
+
+        @include media(991) {
+            margin-bottom: 29px;
+            gap: 0;
+        }
     }
 
     &-content {
         width: 100%;
+        
+        @include media(1420) {
+            flex-direction: column;
+            align-items: flex-end !important;
+            gap: 20px;
+        }
 
         &__text {
+            @include media(1420) {
+                width: 100%;
+            }
+
             h3 {
                 font-size: 48px;
                 font-weight: 400;
                 line-height: 60px;
+
+                @include media(991) {
+                    font-size: 16px;
+                    line-height: 24px;
+                    text-align: center;
+                }
             }
 
             h2 {
@@ -206,12 +306,25 @@ body {
                 font-weight: 600;
                 line-height: 60px;
                 margin-bottom: 26px;
+
+                @include media(991) {
+                    font-size: 18px;
+                    line-height: 24px;
+                    text-align: center;
+                    margin-bottom: 288px;
+                }
             }
 
             h4 {
                 font-size: 36px;
                 line-height: 50px;
                 font-weight: bold;
+
+                @include media(991) {
+                    font-size: 16px;
+                    line-height: 24px;
+                    text-align: center;
+                }
             }
         }
 
@@ -238,6 +351,10 @@ body {
             width: 388px;
             gap: 24px;
 
+            @include media(1420) {
+                width: 100%;
+            }
+
             h4 {
                 font-size: 20px;
                 font-weight: bold;
@@ -251,6 +368,12 @@ body {
                 font-weight: bold;
                 font-style: italic;
                 font-family: $font-pt-serif;
+
+                @include media(1420) {
+                    br {
+                        display: none;
+                    }
+                }
             }
         }
 
@@ -269,12 +392,30 @@ body {
         height: 718px;
         padding: 74px 62px;
 
+        @include media(1420) {
+            height: 650px;
+            padding: 64px 56px;
+        }
+
+        @include media(991) {
+            height: 400px;
+            padding: 20px 12px;
+        }
+
+        @include media(575) {
+            height: 152px;
+        }
+
         img {
             top: 0;
             left: 0;
             object-fit: cover;
             z-index: -1;
             border-radius: 20px;
+
+            @include media(991) {
+                border-radius: 10px;
+            }
         }
 
         h1 {
@@ -282,6 +423,18 @@ body {
             font-weight: 900;
             color: #3B718A;
             text-transform: uppercase;
+
+            @include media(1420) {
+                font-size: 56px;
+            }
+
+            @include media(991) {
+                font-size: 20px;
+            }
+
+            @include media(575) {
+                font-size: 14px;
+            }
         }
     }
 }
@@ -298,6 +451,14 @@ body {
     &__left {
         width: 100%;
         gap: 64px;
+        
+        @include media(1199) {
+            gap: 40px;
+        }
+
+        @include media(575) {
+            gap: 24px;
+        }
     }
 
     &__right {
@@ -306,15 +467,35 @@ body {
         border-radius: 20px;
         background: #F1E8F6;
         padding: 24px 26.5px 31px;
+
+        @include media(1199) {
+            width: 350px;
+        }
     }
 
     &__item {
         gap: 48px;
 
+        @include media(1199) {
+            gap: 30px;
+        }
+
+        @include media(575) {
+            gap: 18px;
+        }
+
         h4 {
             font-size: 24px;
             line-height: 140%;
             color: #88368C;
+
+            @include media(1199) {
+                font-size: 20px;
+            }
+
+            @include media(575) {
+                font-size: 12px;
+            }
         }
     }
 
@@ -324,9 +505,22 @@ body {
         line-height: 140%;
         color: #88368C;
         text-transform: uppercase;
+
+        @include media(1199) {
+            font-size: 26px;
+        }
+
+        @include media(575) {
+            font-size: 16px;
+        }
     }
 
     &__title {
+        gap: 34px;
+
+        @include media(1199) {
+            gap: 25px;
+        }
 
         h3 {
             font-size: 30px;
@@ -334,11 +528,26 @@ body {
             line-height: 140%;
             color: #88368C;
             text-transform: uppercase;
+
+            @include media(1199) {
+                font-size: 26px;
+            }
+
+            @include media(575) {
+                font-size: 16px;
+            }
         }
-        gap: 34px;
         
         .line {
             margin-bottom: 10px;
+
+            @include media(1199) {
+                margin-bottom: 8px;
+            }
+
+            @include media(575) {
+                display: none;
+            }
         }
     }
 
@@ -348,21 +557,55 @@ body {
         border-radius: 10px 0 0 10px;
         border-left: 16px solid #8A3D8D;
 
+        @include media(1199) {
+            border-left: 10px solid #8A3D8D;
+        }
+        
+        @include media(575) {
+            padding: 16px 12px;
+            border-left: 17px solid #8A3D8D;
+        }
+
         &-wrap {
             padding-left: 64px;
+
+            @include media(1199) {
+                padding-left: 0;
+            }
         }
 
         p {
             font-size: 24px;
             line-height: 140%;
+
+            @include media(1199) {
+                font-size: 20px;
+            }
+
+            @include media(575) {
+                font-size: 12px;
+            }
         }
     }
 
     .text-list {
+        @include media(1199) {
+            flex-direction: column !important;
+            gap: 30px;
+        }
+
+        @include media(575) {
+            gap: 18px;
+        }
+
         p {
             font-size: 18px;
             font-weight: 400;
             line-height: 140%;
+
+            @include media(1199) {
+                font-size: 16px;
+            }
 
             &.text-purple {
                 color: #88368C;
@@ -373,18 +616,65 @@ body {
             font-size: 24px;
             line-height: 140%;
             color: #686868;
+
+            @include media(1199) {
+                font-size: 20px;
+            }
+
+            @include media(575) {
+                font-size: 12px;
+            }
         }
 
         &__left {
-            width: 548px;
+            width: 43%;
             flex-shrink: 0;
             gap: 34px;
             padding-right: 60px;
+
+            @include media(1199) {
+                width: 100%;
+                padding-right: 0;
+            }
+
+            @include media(575) {
+                gap: 18px;
+            }
         }
 
         &__right {
-            width: 100%;
+            width: 57%;
             gap: 20px;
+
+            @include media(1199) {
+                width: 100%;
+            }
+
+            @include media(575) {
+                gap: 18px;
+            }
+        }
+    }
+
+    .btn-purple:not(.active) img {
+        transform: rotate(180deg);
+    }
+
+    .texts {
+        display: none;
+        flex-direction: column;
+        gap: 64px;
+
+        &.active {
+            display: flex;
+        }
+
+        @include media(1199) {
+            gap: 40px;
+        }
+
+        @include media(575) {
+            gap: 18px;
         }
     }
 
@@ -400,21 +690,41 @@ body {
         line-height: 140%;
         color: #686868;
 
+        @include media(1199) {
+            font-size: 20px;
+        }
+
+        @include media(575) {
+            font-size: 12px;
+        }
+
         &-sm {
             font-size: 18px;
             font-weight: 400;
             line-height: 150%;
+
+            @include media(1199) {
+                font-size: 16px;
+            }
+
+            @include media(575) {
+                font-size: 14px;
+            }
         }
     }
 
     &__card {
-        height: 542px;
         width: 100%;
 
         img {
             width: 100%;
             height: 100%;
             border-radius: 20px;
+            object-fit: cover;
+
+            @include media(575) {
+                border-radius: 10px;
+            }
         }
     }
     
@@ -423,10 +733,37 @@ body {
         gap: 45px;
         padding-left: 64px;
 
+        @include media(1199) {
+            gap: 30px;
+            padding-left: 0;
+        }
+
+        @include media(575) {
+            gap: 24px;
+        }
+
         li {
             gap: 23px;
             font-size: 24px;
             line-height: 140%;
+
+            @include media(1199) {
+                font-size: 20px;
+
+                img {
+                    margin-top: 10px;
+                }
+            }
+
+            @include media(575) {
+                gap: 11px;
+                font-size: 12px;
+
+                img {
+                    width: 24px;
+                    flex-shrink: 0;
+                }
+            }
         }
     }
 }
