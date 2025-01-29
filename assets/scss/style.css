@@ -359,6 +359,13 @@ body {
 .news-block__title {
   gap: 34px;
 }
+.news-block__title h3 {
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 140%;
+  color: #88368C;
+  text-transform: uppercase;
+}
 .news-block__title .line {
   margin-bottom: 10px;
 }
@@ -567,7 +574,7 @@ body {
   bottom: 0;
   margin: auto;
 }
-@media screen and (max-width: 1750px) {
+@media screen and (max-width: 1199px) {
   .footer_block .footer_img {
     width: 280px;
     flex-shrink: 0;
