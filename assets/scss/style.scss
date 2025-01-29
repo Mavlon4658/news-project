@@ -113,7 +113,7 @@ body {
         height: 100%;
         display: flex;
         align-items: center;
-        
+
         @include media(1199) {
             font-size: 20px;
         }
@@ -253,7 +253,7 @@ body {
                 font-family: $font-pt-serif;
             }
         }
-        
+
         &__link {
             font-size: 18px;
             font-family: $font-inter;
@@ -313,7 +313,7 @@ body {
     }
 
     &__title {
-        
+
         h3 {
             font-size: 30px;
             font-weight: bold;
@@ -418,3 +418,250 @@ body {
     }
 }
 // Event card end
+
+// top_btn
+.top_btn {
+    display: none;
+    margin: 56px 0 162px 0;
+
+    @include media(993) {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    span {
+        font-family: $font-montserrat;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 22.4px;
+        text-align: center;
+        color: #88368C;
+    }
+}
+// top_btn
+
+// footer
+.footer {
+    border-radius: 20px 20px 0 0;
+    background: #F1E8F6;
+
+    @include media(993) {
+        padding-top: 20px;
+    }
+
+    h6 {
+        font-family: $font-montserrat;
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 33.6px;
+        color: #88368C;
+        padding: 79px 0 21px 46px;
+
+        @include media(993) {
+            font-size: 18px;
+            line-height: 21px;
+            text-align: center;
+            padding: 0 0 24px 0;
+        }
+    }
+
+    .container {
+
+        @include media(993) {
+            padding: 0;
+        }
+    }
+
+    &_in {
+        @include media(993) {
+            position: relative;
+            padding: 100px 20px 40px 20px;
+            border-radius: 10px;
+            background: #fff;
+        }
+    }
+
+    &_block {
+        padding: 56px 46px 54px 46px;
+        background: #ffffff;
+        border-radius: 20px;
+        display: flex;
+        align-items: start;
+        gap: 133px;
+        position: relative;
+
+        @include media(1200) {
+            gap: 50px;
+        }
+
+        @include media(993) {
+            position: static;
+            padding: 0;
+            gap: 28px;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .footer_img {
+            position: absolute;
+            right: -10%;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+
+            @include media(1750) {
+                width: 280px;
+                flex-shrink: 0;
+                height: 266px;
+            }
+
+            @include media(993) {
+                top: -28%;
+                left: 0;
+                right: 0;
+                bottom: auto;
+            }
+
+            @include media(350) {
+                width: 200px;
+                height: 190px;
+                top: -20%;
+            }
+        }
+
+        .message_btn {
+            margin-top: 61px;
+            font-family: $font-roboto;
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 38px;
+            text-align: center;
+            color: #FFF;
+            background: linear-gradient(180deg, rgba(201, 131, 204, 0) -48.08%, #B586BC 100%);
+            padding: 8px 32px;
+            border: 5px;
+            box-shadow: 5px 5px 15px 0px #B586BC80;
+
+            @include media(993) {
+                margin-top: 24px;
+                font-size: 18px;
+                line-height: 38px;
+                width: 100%;
+                padding: 4px;
+            }
+        }
+
+        &_left {
+
+            @include media(993) {
+                width: 100%;
+            }
+
+            ol {
+                padding-left: 20px;
+
+                @include media(993) {
+                    padding-left: 0;
+                    text-align: center;
+                }
+
+                li {
+                    list-style-type: disc;
+
+                    @include media(993) {
+                        list-style-type: none;
+                    }
+                }
+
+                a {
+                    font-family: $font-roboto;
+                    font-size: 24px;
+                    font-weight: 700;
+                    line-height: 38px;
+                    color: #252525;
+
+                    @include media(993) {
+                        font-size: 16px;
+                        line-height: 21px;
+                    }
+                }
+            }
+        }
+
+        &_right {
+            gap: 20px;
+
+            @include media(993) {
+                gap: 12px;
+                width: 100%;
+            }
+
+            a {
+                gap: 20px;
+                font-family: $font-roboto;
+                font-size: 24px;
+                font-weight: 700;
+                line-height: 38px;
+                color: #88368C;
+
+                @include media(993) {
+                    font-size: 18px;
+                    line-height: 38px;
+                }
+            }
+
+            img {
+                width: 55px;
+                height: 55px;
+                flex-shrink: 0;
+
+                @include media(993) {
+                    width: 42px;
+                    height: 42px;
+                }
+            }
+        }
+    }
+
+    &_bottom {
+        padding: 34px 0 64px 46px;
+
+        @include media(993) {
+            padding: 24px 0 31px 0;
+        }
+
+        p,
+        a {
+            font-family: $font-montserrat;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 27px;
+            color: #252525;
+
+            @include media(993) {
+                font-size: 14px;
+                line-height: 21px;
+            }
+        }
+
+        a {
+            margin-top: 20px;
+
+            @include media(993) {
+                margin-top: 12px;
+            }
+
+            br {
+                display: none;
+
+                @include media(993) {
+                    display: block;
+                }
+            }
+        }
+    }
+}
+// footer
