@@ -277,7 +277,7 @@ body {
 
     &-content {
         width: 100%;
-        
+
         @include media(1420) {
             flex-direction: column;
             align-items: flex-end !important;
@@ -451,7 +451,7 @@ body {
     &__left {
         width: 100%;
         gap: 64px;
-        
+
         @include media(1199) {
             gap: 40px;
         }
@@ -537,7 +537,7 @@ body {
                 font-size: 16px;
             }
         }
-        
+
         .line {
             margin-bottom: 10px;
 
@@ -560,7 +560,7 @@ body {
         @include media(1199) {
             border-left: 10px solid #8A3D8D;
         }
-        
+
         @include media(575) {
             padding: 16px 12px;
             border-left: 17px solid #8A3D8D;
@@ -727,7 +727,7 @@ body {
             }
         }
     }
-    
+
 
     &__list {
         gap: 45px;
@@ -881,6 +881,11 @@ body {
     }
 
     &_in {
+        width: 90%;
+        @include media(1420) {
+            width: 100%;
+        }
+
         @include media(993) {
             position: relative;
             padding: 100px 20px 40px 20px;
@@ -912,16 +917,23 @@ body {
 
         .footer_img {
             position: absolute;
-            right: -10%;
+            right: -17%;
             top: 0;
             bottom: 0;
             margin: auto;
 
-            @include media(1199) {
+            @include media(1420) {
                 width: 280px;
                 flex-shrink: 0;
                 height: 266px;
+                right: -20px;
             }
+
+            // @include media(1199) {
+            //     width: 280px;
+            //     flex-shrink: 0;
+            //     height: 266px;
+            // }
 
             @include media(993) {
                 top: -28%;
@@ -947,7 +959,7 @@ body {
             color: #FFF;
             background: linear-gradient(180deg, rgba(201, 131, 204, 0) -48.08%, #B586BC 100%);
             padding: 8px 32px;
-            border: 5px;
+            border-radius: 5px;
             box-shadow: 5px 5px 15px 0px #B586BC80;
 
             @include media(993) {
