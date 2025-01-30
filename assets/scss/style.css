@@ -126,9 +126,11 @@ body {
   color: #FFF;
   background: #751f7a;
 }
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 1420px) {
   .btn-purple {
     padding: 9px 30px;
+    font-size: 20px;
+    line-height: 28px;
   }
 }
 @media screen and (max-width: 575px) {
@@ -161,7 +163,12 @@ body {
   width: 100%;
   z-index: 4;
 }
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 1420px) {
+  .header {
+    top: 30px;
+  }
+}
+@media screen and (max-width: 767px) {
   .header {
     background: #88368C;
     top: 0;
@@ -172,7 +179,7 @@ body {
   padding: 0 30px;
   border-radius: 10px;
 }
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 767px) {
   .header-container {
     padding: 12px 0;
     background: transparent;
@@ -191,12 +198,18 @@ body {
   display: flex;
   align-items: center;
 }
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 1420px) {
   .header a {
-    font-size: 20px;
+    font-size: 18px;
+    padding: 10px 15px;
   }
 }
 @media screen and (max-width: 991px) {
+  .header a {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 767px) {
   .header a {
     font-size: 16px;
     padding: 0;
@@ -273,6 +286,11 @@ body {
 }
 .home-container {
   padding: 124px 0 48px;
+}
+@media screen and (max-width: 1420px) {
+  .home-container {
+    padding: 114px 0 48px;
+  }
 }
 @media screen and (max-width: 991px) {
   .home-container {
