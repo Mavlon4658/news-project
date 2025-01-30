@@ -874,10 +874,7 @@ body {
     }
 
     .container {
-
-        @include media(993) {
-            padding: 0;
-        }
+        padding: 0;
     }
 
     &_in {
