@@ -287,8 +287,8 @@ body {
 }
 @media screen and (max-width: 1420px) {
   .home-box {
-    width: 350px;
-    height: 350px;
+    width: 300px;
+    height: 300px;
   }
 }
 @media screen and (max-width: 991px) {
@@ -306,7 +306,7 @@ body {
 }
 @media screen and (max-width: 1420px) {
   .home-box img:first-child {
-    width: 210px;
+    width: 180px;
   }
 }
 @media screen and (max-width: 991px) {
@@ -352,12 +352,10 @@ body {
 }
 @media screen and (max-width: 1420px) {
   .home-content {
-    flex-direction: column;
-    align-items: flex-end !important;
     gap: 20px;
   }
 }
-@media screen and (max-width: 1420px) {
+@media screen and (max-width: 992px) {
   .home-content__text {
     width: 100%;
   }
@@ -440,8 +438,13 @@ body {
 }
 @media screen and (max-width: 1420px) {
   .home-content__right {
-    width: 100%;
+    width: 350px;
     gap: 20px;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .home-content__right {
+    width: 350px;
   }
 }
 .home-content__right h4 {
@@ -919,7 +922,8 @@ body {
 }
 @media screen and (max-width: 1420px) {
   .event-card img {
-    height: 150px;
+    height: auto;
+    width: 100%;
     margin-bottom: 8px;
   }
 }
@@ -1016,9 +1020,15 @@ body {
     padding: 0 0 24px 0;
   }
 }
-@media screen and (max-width: 993px) {
-  .footer .container {
-    padding: 0;
+.footer .container {
+  padding: 0;
+}
+.footer_in {
+  width: 90%;
+}
+@media screen and (max-width: 1420px) {
+  .footer_in {
+    width: 100%;
   }
 }
 @media screen and (max-width: 993px) {
@@ -1054,16 +1064,17 @@ body {
 }
 .footer_block .footer_img {
   position: absolute;
-  right: -10%;
+  right: -14%;
   top: 0;
   bottom: 0;
   margin: auto;
 }
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 1420px) {
   .footer_block .footer_img {
     width: 280px;
     flex-shrink: 0;
     height: 266px;
+    right: -20px;
   }
 }
 @media screen and (max-width: 993px) {
@@ -1091,7 +1102,7 @@ body {
   color: #FFF;
   background: linear-gradient(180deg, rgba(201, 131, 204, 0) -48.08%, #B586BC 100%);
   padding: 8px 32px;
-  border: 5px;
+  border-radius: 5px;
   box-shadow: 5px 5px 15px 0px rgba(181, 134, 188, 0.5019607843);
 }
 @media screen and (max-width: 993px) {

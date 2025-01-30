@@ -227,8 +227,8 @@ body {
         flex-shrink: 0;
 
         @include media (1420) {
-            width: 350px;
-            height: 350px;
+            width: 300px;
+            height: 300px;
         }
 
         @include media(991) {
@@ -245,7 +245,7 @@ body {
                 transform: scale(1.05);
 
                 @include media(1420) {
-                    width: 210px;
+                    width: 180px;
                 }
 
                 @include media(991) {
@@ -292,13 +292,13 @@ body {
         width: 100%;
         
         @include media(1420) {
-            flex-direction: column;
-            align-items: flex-end !important;
+            // flex-direction: column;
+            // align-items: flex-end !important;
             gap: 20px;
         }
 
         &__text {
-            @include media(1420) {
+            @include media(992) {
                 width: 100%;
             }
 
@@ -381,8 +381,12 @@ body {
             gap: 24px;
 
             @include media(1420) {
-                width: 100%;
+                width: 350px;
                 gap: 20px;
+            }
+
+            @include media(1199) {
+                width: 350px;
             }
 
             h4 {
@@ -857,7 +861,8 @@ body {
         object-fit: cover;
 
         @include media(1420) {
-            height: 150px;
+            height: auto;
+            width: 100%;
             margin-bottom: 8px;
         }
     }
@@ -959,13 +964,15 @@ body {
     }
 
     .container {
-
-        @include media(993) {
-            padding: 0;
-        }
+        padding: 0;
     }
 
     &_in {
+        width: 90%;
+        @include media(1420) {
+            width: 100%;
+        }
+
         @include media(993) {
             position: relative;
             padding: 100px 20px 40px 20px;
@@ -997,15 +1004,16 @@ body {
 
         .footer_img {
             position: absolute;
-            right: -10%;
+            right: -14%;
             top: 0;
             bottom: 0;
             margin: auto;
 
-            @include media(1199) {
+            @include media(1420) {
                 width: 280px;
                 flex-shrink: 0;
                 height: 266px;
+                right: -20px;
             }
 
             @include media(993) {
@@ -1032,7 +1040,7 @@ body {
             color: #FFF;
             background: linear-gradient(180deg, rgba(201, 131, 204, 0) -48.08%, #B586BC 100%);
             padding: 8px 32px;
-            border: 5px;
+            border-radius: 5px;
             box-shadow: 5px 5px 15px 0px #B586BC80;
 
             @include media(993) {
