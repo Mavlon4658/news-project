@@ -505,16 +505,31 @@ body {
   height: 718px;
   padding: 74px 62px;
 }
+@media screen and (max-width: 1750px) {
+  .home-card {
+    height: 618px;
+  }
+}
 @media screen and (max-width: 1420px) {
   .home-card {
-    height: 500px;
+    height: 518px;
     padding: 64px 56px;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .home-card {
+    height: 418px;
   }
 }
 @media screen and (max-width: 991px) {
   .home-card {
-    height: 400px;
+    height: 318px;
     padding: 20px 12px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .home-card {
+    height: 218px;
   }
 }
 @media screen and (max-width: 575px) {

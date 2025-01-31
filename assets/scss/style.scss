@@ -449,14 +449,26 @@ body {
         height: 718px;
         padding: 74px 62px;
 
+        @include media(1750) {
+            height: 618px;
+        }
+
         @include media(1420) {
-            height: 500px;
+            height: 518px;
             padding: 64px 56px;
         }
 
+        @include media(1199) {
+            height: 418px;
+        }
+
         @include media(991) {
-            height: 400px;
+            height: 318px;
             padding: 20px 12px;
+        }
+
+        @include media(767) {
+            height: 218px;
         }
 
         @include media(575) {
